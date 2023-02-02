@@ -1,39 +1,10 @@
-{
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+[{"question":"Which gate is also known as nothing or all gate? ","answers":{"a":"OR gate","b":"AND gate","c":"NAND gate","d":"NOT gate"},"correctAnswer":"b"},
+{"question":"The output of the two-input NAND gate is high","answers":{"a":"Only if both the inputs are high","b":"Only if both the inputs are low","c":"Only if one input is high and the other is low","d":"If at least one input is low"},"correctAnswer":"d"},
+{"question":"An exclusive NOR gate is logically equal to","answers":{"a":"Inverter followed by an XOR gate","b":"NOT gate followed by an exclusive XOR gate","c":"Exclusive OR gate followed by an inverter","d":"The complement of a NOR gate"},"correctAnswer":"c"},
+{"question":"Maximum number of input lines in practical NOR gate IC is _____.","answers":{"a":"11","b":"zero","c":"Infinite","d":"3"},"correctAnswer":"a"},
+{"question":"Digital circuits can be made by the repeated use of ________.","answers":{"a":"OR gates","b":"NOT gates","c":"NAND gates","d":"None of the above"},"correctAnswer":"c"},
+{"question":"The minimum number of NAND gates required to implement the Boolean function A + AB’ + AB’C is equal to","answers":{"a":"Zero","b":"1","c":"4","d":"7"},"correctAnswer":"a"},
+{"question":"The output of the logic gate shown is","image":"<img src='images/que7pre.png'/>","answers":{"a":"0","b":"1","c":"A","d":"A’"},"correctAnswer":"d"},
+{"question":"For the logic circuit shown in the figure, the required input combination (A,B,C) to make the output X = 1 is","image":"<img src='images/que8pre.png'/>","answers":{"a":"1, 0, 1","b":"0, 0, 1","c":"1, 1, 1","d":"0, 1, 1"},"correctAnswer":"d"},
+{"question":"The output F in the digital logic circuit shown in the figure is","image":"<img src='images/que9pre.png'/>","answers":{"a":"X’YZ + XY’Z","b":"X’YZ’+ XY’Z’","c":"X’Y’Z + XYZ","d":"X’Y’Z’ + XYZ"},"correctAnswer":"a"},
+{"question":"_________ NOT circuits contained in a 7404 IC","answers":{"a":"4","b":"3","c":"6","d":"2"},"correctAnswer":"c"}]
