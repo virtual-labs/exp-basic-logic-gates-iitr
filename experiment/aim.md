@@ -1,1 +1,1 @@
-### Aim of the experiment
+#### To study basic logic ICs and verify their truth tables.  

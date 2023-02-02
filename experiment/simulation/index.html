@@ -1,13 +1,344 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Familiarisation of logic gates IC</title>
+   
+
+    <!--JSplumb-->
+    <link rel="stylesheet" href="css\jsplumbtoolkit-defaults.css">
+    <script src="js\jsplumb.min.js"></script>
+
+    <script src="js\jquery-latest.js"></script>
+    <script src="js\jquery-ui-latest.js"></script>
+    <script src="js\jquery.jsPlumb-1.3.9-all-min.js"></script>
+
+
+    
+    <!--jQuery-->
+    <script src="js\jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js">
+     </script>  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+      
+    <script  src="js/script1.js"></script>
+    <script src="js/graph.js"></script> 
+
+     
+   
+
+    <!--CSS files-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="exp-name">
+    <p id="head">Familiarisation of ICs  <p id="head1"> </p> </p> 
+    
+</div>
+
+
+  <div id="simulation">
+    <div class="left">
+      
+
+            <div class="border" id="mid">
+
+            <div id="board">
+                      
+     	<div class="ic" id="ic7408" draggable="true" ><img src="images/IC7404.png" id="ic1" width="98px"height="45px" style="margin-top: 50px;">
+           <label style="font-size: 13px;  color: red; position: absolute; top: 83px;left:8px;">1</label>  
+            <label style="font-size: 13px;  color: red; position: absolute; top: 83px;left:88px;">7</label>
+            <label style="font-size: 13px;  color: red; position: absolute;top: 65px;left: 8px;">14</label>
+            <label style="font-size: 13px;  color: red; position: absolute; top: 65px;left:88px;">8</label>
+      </div>
+
+        <div class="led" id="ledoff" draggable="true" >
+          <img src="images/ledoff.png" id="led1" width="115px"height="90px" style="margin-top: 35px; margin-left: -53px; visibility: hidden;">
+          <label id="l1" style="font-size: 13px;  color: black; position: absolute; top: 172px;left:-6px; visibility: hidden;"><b>A1</b></label>  
+          <label id="l2" style="font-size: 13px;  color: black; position: absolute; top: 172px;left:10px; visibility: hidden; "><b>C1</b></label>
+        </div>
+        
+             <!--         <div class="ic" id="ic7408" draggable="true"></div>-->
+                     
+  		
+                </div>
+
+            
+
+        <div id="supply" ><img id="supply1" src="images/supply.png" height="100px" width="160px" style="border-radius:10px;"></div>
+        
+        <div id="input1" draggable="true"></div><img src="images/toggleoff1.png" id="img1" style="top:380px; left:376px; position: absolute; visibility: hidden; height: 70px; width: 35px;" onmouseover="this.style.cursor='pointer'">
+        <label  id="i1" style=" margin-left: 390px; position: absolute; visibility: hidden;" >1</label>
+
+        <div id="input2" draggable="true"></div><img src="images/toggleoff1.png" id="img2" style="top:380px; left:476px; position: absolute; visibility: hidden; height: 70px; width: 35px;" onmouseover="this.style.cursor='pointer'">
+        <label  id="i2" style=" margin-left: 490px; position: absolute;visibility: hidden" >2</label>
+        
+        <div id="input3" draggable="true"></div><img src="images/toggleoff1.png" id="img3" style="top:380px; left:576px; position: absolute; visibility: hidden; height: 70px; width: 35px;" onmouseover="this.style.cursor='pointer'">
+        <label id="i3" style=" margin-left: 590px; position: absolute;visibility: hidden" >3</label>
+
+      </div>
+      <div class="bottom">
+
+        <button id="checkbutton" disabled onmouseover="this.style.cursor='pointer'" disabled> Check Connection</button>
+         <button id="resetbutton" onclick="resetCircuit()"onmouseover="this.style.cursor='pointer'" disabled> Reset </button>
+        </div>             
+                   
+
+
+</div>
+<div class="right">
+  <div>
+    <button class="right_btn" id="First" style="display:none">Instructions</button>
+    <button class="right_btn" id="second" style="display:none">Components</button>
+    <div class="Button-data" id="First_Data" style="display: none">
+        <div class="panel">
+            <button class="close-btn" id="close-btn"><span>&#10005</span></button>
+           <div id="first_insrt">
+          </div></div></div></div>
+          
+          <div class="Button-data" id="Second_Data" style="display: none">
+            <div class="Components">
+                <button class="close-btn" id="btn_close"><span>&#10005</span></button>
+                <div>
+                  <button id="breadboard" onmouseover="this.style.cursor='pointer'" >Breadboard</button>
+                  <button id="powersupply" onmouseover="this.style.cursor='pointer'">5V DC supply</button>
+                  <button id="digital" onmouseover="this.style.cursor='pointer'">Toggle switches</button>
+                </div>
+                <div>
+                  <button id="ic" onmouseover="this.style.cursor='pointer'">IC</button>
+                  <button id="led" onmouseover="this.style.cursor='pointer'">LED</button>
+                     </div>
+            </div>
+        </div>
+        <div>
+          <img src="images/dot.png" id="dot"style="position: absolute;  visibility: hidden;">
+          <img src="images/dot1.png" id="dot1"style="position: absolute;  visibility: hidden;">
+          <img src="images/dot2.png" id="dot3"style="position: absolute;  visibility: hidden;">
+        </div>
+      <form action="/action_page.php">
+      <div id="chooseone"><br>
+              <b>Select IC</b><br>
+      <select class="button" id="sel2" name="sellist2" onchange ="parameter();">
+        <option value="none" > &nbsp; None</option>
+        <option  value="first"> &nbsp; IC-7404(1-INPUT NOT GATE IC)</option>
+        <option value="second" > &nbsp; IC-7432(2-INPUT OR GATE IC)</option>
+        <option value="third"> &nbsp; IC-7408(2-INPUT AND GATE IC)</option>
+       
+      <option value="fourth"> &nbsp; IC-7400(2-INPUT NAND GATE IC)</option>
+      <option value="fifth"> &nbsp; IC-7402(2-INPUT NOR GATE IC)</option>
+      <option value="sixth"> &nbsp; IC-7486(2-INPUT EX-0R GATE IC)</option>
+      <option value="seventh"> &nbsp; IC-74266(2-INPUT EX-NOR GATE IC)</option>
+     
+      <option value="eighth"> &nbsp; IC-7411(3-INPUT AND GATE IC)</option>
+      <option value="ninth"> &nbsp; IC-74HC4075(3-INPUT OR GATE IC)</option>
+       <option value="tenth"> &nbsp; IC-7410(3-INPUT NAND GATE IC)</option>
+        <option value="eleventh"> &nbsp; IC-7427(3-INPUT NOR GATE IC)</option>
+      </select><br>
+        
+
+        </div>
+        
+        </form>   
+<div id="showanother"> <b>Select a gate:</b><br><br>
+<input type="radio" id="one"  name="option" value="one" onclick="radiobutton1();">
+<label  class="radio-input" for="one">Gate 1 (pin 1 and pin 2)</label><br>
+
+<input type="radio" id="two"  name="option" value="two" onclick="radiobutton2();">
+<label  class="radio-input" for="two">Gate 2 (pin 3 and pin 4)</label><br>
+
+<input type="radio" id="three"  name="option" value="three" onclick="radiobutton3();">
+<label  class="radio-input" for="three">Gate 3 (pin 5 and pin 6)</label><br>
+
+<input type="radio" id="four"  name="option" value="four" onclick="radiobutton4();">
+<label  class="radio-input" for="four">Gate 4 (pin 9 and pin 8)</label><br>
+
+<input type="radio" id="five"  name="option" value="five" onclick="radiobutton5();">
+<label  class="radio-input" for="four">Gate 5 (pin 11 and pin 10)</label><br>
+
+<input type="radio" id="six"  name="option" value="six" onclick="radiobutton6();">
+<label  class="radio-input" for="four">Gate 6 (pin 12 and pin 13)</label><br>
+
+</div>
+      
+      <div id="showanother1"> <b>Select a gate:</b><br><br>
+<input type="radio" id="seven"  name="option1" value="seven" onclick="radiobutton7();">
+<label  class="radio-input" for="seven">Gate 1 (pin 1, 2 and 3)</label><br>
+
+<input type="radio" id="eight"  name="option1" value="eight"onclick="radiobutton8();" >
+<label  class="radio-input" for="eight">Gate 2 (pin 4, 5 and 6)</label><br>
+
+<input type="radio" id="nine"  name="option1" value="nine"onclick="radiobutton9();" >
+<label  class="radio-input" for="nine">Gate 3 (pin 8, 9 and 10)</label><br>
+
+<input type="radio" id="ten"  name="option1" value="ten" onclick="radiobutton10();" >
+<label  class="radio-input" for="ten">Gate 4 (pin 11, 12 and 13)</label><br>
+
+</div>
+  
+
+
+
+      <div id="showanother2"> <b>Select a gate:</b><br><br>
+<input type="radio" id="eleven"  name="option2" value="eleven" onclick="radiobutton11();">
+<label  class="radio-input" for="eleven">Gate 1 (pin 1, 2, 12 and 13)</label><br>
+
+<input type="radio" id="twelve"  name="option2" value="twelve"onclick="radiobutton12();" >
+<label  class="radio-input" for="twelve">Gate 2 (pin 3, 4, 5 and 6)</label><br>
+
+<input type="radio" id="thirteen"  name="option2" value="thirteen"onclick="radiobutton13();" >
+<label  class="radio-input" for="thirteen">Gate 3 (pin 8, 9, 10 and 11)</label><br>
+
+
+</div>
+
+
+      <div id="showanother3"> <b>Select a gate:</b><br><br>
+<input type="radio" id="fourteen"  name="option3" value="fourteen" onclick="radiobutton14();">
+<label  class="radio-input" for="fourteen">Gate 1 (pin 1 ,2,8and 9)</label><br>
+
+<input type="radio" id="fifteen"  name="option3" value="fifteen"onclick="radiobutton15();" >
+<label  class="radio-input" for="fifteen">Gate 2 (pin 3,4,5 and 6)</label><br>
+
+<input type="radio" id="sixteen"  name="option3" value="sixteen"onclick="radiobutton16();" >
+<label  class="radio-input" for="sixteen">Gate 3 (pin 10,11 ,12 and 13)</label><br>
+
+
+</div>
+
+
+<div id="box1" >
+  
+     <table id="mytable" border="2px solid black" >
+      <br>
+      <b  style="top:80px; left: 110px;font-size: 20px; font-family: sans-serif;">TRUTH TABLE</b><br><p>Fill the truth table.</p>
+     <tr style="background-color: #3c8dbc">
+       <th style="width: 100px;">Input</th>
+       <th style="width: 70px;">Output</th>
+     </tr>  
+       <tr>
+       <th >0</th>
+       <th><input type="text" id="cell1" maxlength ="1" style="width: 70px; text-align: center; font-weight: bolder;color: red;" ></th>
+     </tr> 
+      </tr>  
+       <tr>
+       <th>1</th>
+       <th><input type="text" id="cell2" maxlength ="1" style="width: 70px; text-align: center;font-weight: bolder;color: red;" ></th>
+     </tr> 
+     </table>      
+</div>
+
+
+
+<div id="box2" >
+     <table id="mytable1" border="2px solid black" >
+      <br>
+      <b  style=" top:10px; left: 100px; text-align: center;font-family: sans-serif;"> TRUTH TABLE</b>
+     <tr style="background-color: #3c8dbc">
+       <th style="width: 100px;">Input</th>
+       <th style="width: 70px;">Output</th>
+     </tr>  
+       <tr>
+       <th > 0  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 </th>
+       
+       <th><input type="text" id="cell3" maxlength ="1" style="width: 70px; font-weight: bolder;color: red;text-align: center;" ></th>
+     </tr> 
+      </tr>  
+       <tr>
+        <th> 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 </th>
+       
+       <th><input type="text" id="cell4" maxlength ="1" style="width: 70px; font-weight: bolder;color: red;text-align: center;" ></th>
+     </tr> 
+      </tr>  
+       <tr>
+    
+       <th > 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 </th>
+       <th><input type="text" id="cell5" maxlength ="1" style="width: 70px;font-weight: bolder;color: red; text-align: center;" ></th>
+     </tr> 
+      </tr>  
+       <tr>
+        
+       <th> 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 </th>
+       <th><input type="text" id="cell6"maxlength ="1"  style="width: 70px;font-weight: bolder;color: red; text-align: center;" ></th>
+     </tr> 
+     </table>      
+</div>
+
+
+<div id="box3" >
+     <table id="mytable2" border="2px solid black" style="position: absolute; top:40px; left: 15px;" >
+
+      <b  style="position: absolute; top:10px; left: 110px; text-align: center;font-family: sans-serif;"> TRUTH TABLE</b>
+     <tr style="background-color: #3c8dbc">
+       <th style="width: 150px;"> Input </th>
+       <th style="width: 75px;"> Output </th>
+     </tr>  
+       <tr>
+        <th> &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</th>
+       
+       <th><input type="text" id="cell7"maxlength ="1"  style="width: 70px; font-weight: bolder;color: red;text-align: center;" ></th>
+     </tr> 
+      </tr>  
+       <tr>
+        <th> &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</th>
+        
+       <th><input type="text" id="cell8" maxlength ="1"  style="width: 70px;font-weight: bolder;color: red; text-align: center;" ></th>
+     </tr> 
+      </tr>  
+       <tr>
+       <th > &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</th>
+     
+       <th><input type="text" id="cell9" maxlength ="1" style="width: 70px;font-weight: bolder;color: red; text-align: center;" ></th>
+     </tr> 
+      </tr>  
+       <tr>
+        <th> &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</th>
+     
+       <th><input type="text" id="cell10" maxlength ="1"  style="width: 70px; font-weight: bolder;color: red;text-align: center;" ></th>
+     </tr>
+        <tr>
+       <th > &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</th>
+      
+      
+       <th><input type="text" id="cell11" maxlength ="1" style="width: 70px;font-weight: bolder;color: red; text-align: center;" ></th>
+     </tr> 
+      </tr>  
+       <tr>
+        <th> &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</th>
+       
+       <th><input type="text" id="cell12" maxlength ="1" style="width: 70px;font-weight: bolder;color: red; text-align: center;" ></th>
+     </tr> 
+      </tr>  
+       <tr>
+       <th > &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</th>
+       
+       <th><input type="text" id="cell13" maxlength ="1" style="width: 70px;font-weight: bolder;color: red; text-align: center;" ></th>
+     </tr> 
+      </tr>  
+       <tr>
+       <th > &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</th>
+      
+       <th><input type="text" id="cell14" maxlength ="1" style="width: 70px;font-weight: bolder;color: red; text-align: center;" ></th>
+     </tr> 
+     </table>      
+</div>
+
+<button id="check"onmouseover="this.style.cursor='pointer'"> CHECK </button>
+<button id="reset" onclick="reset();"onmouseover="this.style.cursor='pointer'"> RESET </button>
+
+<img src="images/NotGate1.png"  id="truthtable">
+<img src="images/NotGate1.png"  id="truthtable1">
+<img src="images/NotGate1.png"  id="truthtable2">
+ 
+
+</div>
+   <script src="js/script.js"></script>
+ 
+<div>
+  <footer><b>&copy;</b> Copyright 2022 Virtual Labs, IIT Roorkee</footer>
+</div>
+
 </html>
