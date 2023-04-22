@@ -1,102 +1,98 @@
 ## Post test
 #### Please attempt the following questions
 
+<br> 
 
-Q1. If any two inputs of 3 input ExOR gate are high then output will be \_\_\_\_\_\_\_\_\_\_.  
+Q1. A positive AND gate is also a negative  
 
-<b>A  0</b>  
-B  1  
-C  Either 0 or 1  
-D  None of these  
+A  NAND gate  
+B  NOR gate  
+C  AND gate  
+<b>D  OR gate</b>  
 <br>
 
 
-Q2. The incorrect input and output lines combination in IC 74266  
+Q2. The Boolean expression for two input NAND gate  
 
-A  Input-1,2 Output- 3  
-<b>B  Input- 4,5 Output- 6</b>  
-C  Input- 8,9 Output- 10  
-D  Input- 12,13 Output- 11  
+<b>A  (A.B)'</b>  
+B  (A+B)'  
+C  A'.B'  
+D  A+B  
 <br>
+
+
+Q3. For multi-input AND gate, the unused input pins should not be left\_\_\_\_\_.  
+
+A  On  
+B  Connected  
+<b>C  Unconnected</b>  
+D  None of the above  
+<br>
+
   
-  
-Q3. The 2 input NOR gate output will be high if the inputs are \_\_\_\_\_\_\_\_\_\_.  
+Q4. A NOT gate IC 7404 contains \_\_\_\_\_\_ NOT gates.  
 
-<b>A  00</b>  
-B  01  
-C  10  
-D  11  
-<br>
-  
-
-Q4. A logic probe is used to test the pins of a 7411 IC with the following results. Is there a problem with the chip and if so, what is the problem?  
-![](images/que4post.png)  
-A  Pin 6 should be ON.  
-<b>B  Pin 6 should be pulsing.</b>  
-C  Pin 8 should be ON  
-D  No problem  
+A  3  
+B  4  
+<b>C  6</b>  
+D  2  
 <br>
 
+ 
+Q5. What is the logic status at A and B to activate the alarm in fire alarm system where A represents temperature sensor while B represents smoke sensor  
 
-Q5. If a 3-input OR gate has eight input possibilities, how many of those possibilities will result in a HIGH output?  
-
-A  1  
-B  2  
-<b>C  7</b>  
-D  8  
-<br>
-
-
-Q6. To build 4 to 1 multiplexer \_\_\_\_\_\_\_\_\_IC is required.  
-
-A  7432  
-B  7404  
-C  7408  
+A  A=1,B=0  
+B  A=0,B=1  
+C  A=1,B=1  
 <b>D  All of the above</b>  
 <br>
 
 
-Q7. Match the logic gates in Column A with their equivalents in Column B. 
+Q6. A fire alarm system can be implemented using  
 
-![](images/que7post.png) 
+A  Basic logic gates  
+B  Op-Amp comparator  
+C  555 timer IC  
+<b>D  All of the above</b>  
+<br>
+
  
-A  P – 2, Q – 4, R – 1, S – 3  
-B  P – 4, Q – 2, R – 1, S – 3  
-C  P – 2, Q – 4, R – 3, S – 1  
-<b>D  P – 4, Q – 2, R – 3, S – 1</b>  
+Q7. The Boolean expression in term of A, B and C to activate the buzzer in burglar alarm system where A represents arm key switch, B represents Reed switch and C represents pressure mat, is  
+
+A  A'.B.C  
+B  A.B.C  
+C  A.(B+C)  
+<b>D  A.(B'+C)</b>  
 <br>
 
+ 
+Q8. How do you make a NAND gate out of an AND gate using inverters (NOT gates)?  
 
-Q8. For the output F to be 1 in the logic circuit shown, the input combination should be 
-
-![](images/que8post.png)
-
-A  A = 1, B = 1, C = 0  
-B  A = 1, B = 0, C = 0  
-C  A = 0, B = 1, C = 0  
-<b>D  A = 0, B = 0, C = 1</b>  
+<b>A  Invert the output from the AND gate</b>  
+B  Invert both the inputs to the AND gate  
+C  Invert one of the inputs to the AND gate  
+D  Invert both the inputs and output of the AND gate  
 <br>
 
-
-Q9. The output Y in the circuit below is always ‘1’, when
-
-![](images/que9post.png)  
-
-A  Two or more of the inputs P,Q, R are ‘0’  
-<b>B  Two or more of the inputs P,Q, R are ‘1’</b>  
-C  Any odd number of the inputs P,Q,R is ‘0’  
-D  Any odd number of the inputs P,Q,R is ‘1’  
-<br>
   
+Q9. The output of the logic gate in figure is  
+![](images/que2.png)  
 
-Q10. In the figure, the LED 
+A  0  
+B  1  
+<b>C  A'</b>  
+D  A  
+<br>
 
-![](images/que10post.png) 
+ 
+Q10. For the logic circuit shown in the figure, the required input condition (A,B,C) to make the output X =1 is  
+![](images/que3.png)  
 
-A  Emits light when both S<sub>1</sub> and S<sub>2</sub> are closed.  
-B  Emits light when both S<sub>1</sub> and S<sub>2</sub> are open.  
-C  Emits light when only one of S<sub>1</sub> or S<sub>2</sub> is closed.  
-<b>D  Does not emit light, irrespective of the switch positions.</b>  
+A  1, 0, 1  
+B  0, 0, 1  
+C  1, 1, 1  
+<b>D  0, 1, 1</b>  
+
 
 
 
