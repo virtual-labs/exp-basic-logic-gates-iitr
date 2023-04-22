@@ -1,10 +1,4 @@
-
-
 //alert("Fill the Truth-Table");
-
-  
- 
-  
 var isstartedsimulation=false;
 
 const First = document.getElementById('First');
@@ -265,8 +259,6 @@ function breadboard() {
         instance.addEndPoint('brown',4,1, 'board', 'row8', 'r199', [0, 0, 0, -1, 842.5, 281], 'blue');
         instance.addEndPoint('brown',4,1, 'board', 'row8', 'r200', [0, 0, 0, -1, 856, 281], 'blue');
 
-
-        document.getElementById("checkbutton").disabled=false;
     }
 }
 
@@ -276,19 +268,18 @@ function inputs() {
 
     var inputs = new BoardController();
     inputs.setJsPlumbInstance(jsPlumb);
-    inputs.setCircuitContainer('mid');
  
 
-    inputs.addEndPoint('blue',5,1, 'inputs', 'input_A', 'input_A1', [0, 0, 0, 0, 619, -100], 'blue');
-    inputs.addEndPoint('blue',5,1, 'inputs', 'input_A', 'input_A2', [0, 0, 0, 0, 621, -100], 'blue');
-    inputs.addEndPoint('blue',5,1, 'inputs', 'input_B', 'input_B1', [0, 0, 0, 0, 719, -100], 'blue');
-    inputs.addEndPoint('blue',5,1, 'inputs', 'input_B', 'input_B2', [0, 0, 0, 0, 721, -100], 'blue');
+    inputs.addEndPoint('blue',6,1, 'inputs', 'input_A', 'input_A', [0, 0, 0, 0, 616, -100], 'blue');
+    inputs.addEndPoint('blue',6,1,'inputs', 'input_B', 'input_B', [0, 0, 0, 0, 516, -100], 'blue');
+    inputs.addEndPoint('blue',6,1,'inputs', 'input_C', 'input_C', [0, 0, 0, 0,416, -100], 'blue');
+     
 }
 
 function ic7408() {
     var x = document.getElementById("ic7408");
     x.style.visibility = "visible";
-    var y =document.getElementById("ic7408img");
+    var y = document.getElementById("ic7408img");
     y.style.visibility = "visible";
 
     var ic7408 = new BoardController();
@@ -296,84 +287,167 @@ function ic7408() {
     ic7408.setCircuitContainer('mid');
 
     {
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_VCC', 'ic7408_VCC1', [0, 0, 1, -1, 9, 2], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_VCC', 'ic7408_VCC2', [0, 0, 1, -1, 9, 16.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_VCC', 'ic7408_VCC3', [0, 0, 1, -1, 9, 30], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_VCC', 'ic7408_VCC4', [0, 0, 1, -1, 9, 43.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_VCC', 'ic7408_VCC1', [0, 0, 1, -1, 5, 2], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_VCC', 'ic7408_VCC2', [0, 0, 1, -1, 5, 15.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_VCC', 'ic7408_VCC3', [0, 0, 1, -1, 5, 29], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_VCC', 'ic7408_VCC4', [0, 0, 1, -1, 5, 42.5], 'red');
 
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4A', 'ic7408_4A01', [0, 0, 1, -1, 22.5, 2], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4A', 'ic7408_4A02', [0, 0, 1, -1, 22.5, 16.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4A', 'ic7408_4A03', [0, 0, 1, -1, 22.5, 30], 'red');
-        ic7408.addEndPoint('blue',4.2, 1,'ic7408', 'ic7408_4A', 'ic7408_4A04', [0, 0, 1, -1, 22.5, 43.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4A', 'ic7408_4A01', [0, 0, 1, -1, 18.5, 2], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4A', 'ic7408_4A02', [0, 0, 1, -1, 18.5, 15.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4A', 'ic7408_4A03', [0, 0, 1, -1, 18.5, 29], 'red');
+        ic7408.addEndPoint('blue',4.2, 1,'ic7408', 'ic7408_4A', 'ic7408_4A04', [0, 0, 1, -1, 18.5, 42.5], 'red');
 
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4B', 'ic7408_4B01', [0, 0, 1, -1, 35, 2], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4B', 'ic7408_4B02', [0, 0, 1, -1, 35, 16.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4B', 'ic7408_4B03', [0, 0, 1, -1, 35, 30], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4B', 'ic7408_4B04', [0, 0, 1, -1, 35, 43.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4B', 'ic7408_4B01', [0, 0, 1, -1, 32, 2], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4B', 'ic7408_4B02', [0, 0, 1, -1, 32, 15.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4B', 'ic7408_4B03', [0, 0, 1, -1, 32, 29], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_4B', 'ic7408_4B04', [0, 0, 1, -1, 32, 42.5], 'red');
 
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_4Y', 'ic7408_4Y01', [0, 0, 1, -1, 47.5, 2], 'red');
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_4Y', 'ic7408_4Y02', [0, 0, 1, -1, 47.5, 16.5], 'red');
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_4Y', 'ic7408_4Y03', [0, 0, 1, -1, 47.5, 30], 'red');
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_4Y', 'ic7408_4Y04', [0, 0, 1, -1, 47.5, 43.5], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_4Y', 'ic7408_4Y01', [0, 0, 1, -1, 45.5, 2], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_4Y', 'ic7408_4Y02', [0, 0, 1, -1, 45.5, 15.5], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_4Y', 'ic7408_4Y03', [0, 0, 1, -1, 45.5, 29], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_4Y', 'ic7408_4Y04', [0, 0, 1, -1, 45.5, 42.5], 'red');
 
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3A', 'ic7408_3A01', [0, 0, 1, -1, 61, 2], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3A', 'ic7408_3A02', [0, 0, 1, -1, 61, 16.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3A', 'ic7408_3A03', [0, 0, 1, -1, 61, 30], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3A', 'ic7408_3A04', [0, 0, 1, -1, 61, 43.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3A', 'ic7408_3A01', [0, 0, 1, -1, 59, 2], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3A', 'ic7408_3A02', [0, 0, 1, -1, 59, 15.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3A', 'ic7408_3A03', [0, 0, 1, -1, 59, 29], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3A', 'ic7408_3A04', [0, 0, 1, -1, 59, 42.5], 'red');
 
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3B', 'ic7408_3B01', [0, 0, 1, -1, 74.5, 2], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3B', 'ic7408_3B02', [0, 0, 1, -1, 74.5, 16.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3B', 'ic7408_3B03', [0, 0, 1, -1, 74.5, 30], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3B', 'ic7408_3B04', [0, 0, 1, -1, 74.5, 43.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3B', 'ic7408_3B01', [0, 0, 1, -1, 72.5, 2], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3B', 'ic7408_3B02', [0, 0, 1, -1, 72.5, 15.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3B', 'ic7408_3B03', [0, 0, 1, -1, 72.5, 29], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_3B', 'ic7408_3B04', [0, 0, 1, -1, 72.5, 42.5], 'red');
 
-        ic7408.addEndPoint('gren',4.2,1, 'ic7408', 'ic7408_3Y', 'ic7408_3Y01', [0, 0, 1, -1, 88, 2], 'red');
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_3Y', 'ic7408_3Y02', [0, 0, 1, -1, 88, 16.5], 'red');
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_3Y', 'ic7408_3Y03', [0, 0, 1, -1, 88, 30], 'red');
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_3Y', 'ic7408_3Y04', [0, 0, 1, -1, 88, 43.5], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_3Y', 'ic7408_3Y01', [0, 0, 1, -1, 86, 2], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_3Y', 'ic7408_3Y02', [0, 0, 1, -1, 86, 15.5], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_3Y', 'ic7408_3Y03', [0, 0, 1, -1, 86, 29], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_3Y', 'ic7408_3Y04', [0, 0, 1, -1, 86, 42.5], 'red');
 
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1A', 'ic7408_1A02', [0, 0, 1, -1, 7, 110.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1A', 'ic7408_1A03', [0, 0, 1, -1, 7, 124], 'red');
-        ic7408.addEndPoint('blue',4.2, 1,'ic7408', 'ic7408_1A', 'ic7408_1A04', [0, 0, 1, -1, 7, 137.5], 'red');
-       ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1A', 'ic7408_1A05', [0, 0, 1, -1, 7, 151], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1A', 'ic7408_1A02', [0, 0, 1, -1, 5, 109.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1A', 'ic7408_1A03', [0, 0, 1, -1, 5, 123], 'red');
+        ic7408.addEndPoint('blue',4.2, 1,'ic7408', 'ic7408_1A', 'ic7408_1A04', [0, 0, 1, -1, 5, 136.5], 'red');
+       ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1A', 'ic7408_1A05', [0, 0, 1, -1, 5, 150], 'red');
 
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1B', 'ic7408_1B02', [0, 0, 1, -1, 20.5, 110.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1B', 'ic7408_1B03', [0, 0, 1, -1, 20.5, 124], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1B', 'ic7408_1B04', [0, 0, 1, -1, 20.5, 137.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1B', 'ic7408_1B05', [0, 0, 1, -1, 20.5, 151], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1B', 'ic7408_1B02', [0, 0, 1, -1, 18.5, 109.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1B', 'ic7408_1B03', [0, 0, 1, -1, 18.5, 123], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1B', 'ic7408_1B04', [0, 0, 1, -1, 18.5, 136.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_1B', 'ic7408_1B05', [0, 0, 1, -1, 18.5, 150], 'red');
 
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_1Y', 'ic7408_1Y02', [0, 0, 1, -1, 34, 110.5], 'red');
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_1Y', 'ic7408_1Y03', [0, 0, 1, -1, 34, 124], 'red');
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_1Y', 'ic7408_1Y04', [0, 0, 1, -1, 34, 137.5], 'red');
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_1Y', 'ic7408_1Y05', [0, 0, 1, -1, 34, 151], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_1Y', 'ic7408_1Y02', [0, 0, 1, -1, 32, 109.5], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_1Y', 'ic7408_1Y03', [0, 0, 1, -1, 32, 123], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_1Y', 'ic7408_1Y04', [0, 0, 1, -1, 32, 136.5], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_1Y', 'ic7408_1Y05', [0, 0, 1, -1, 32, 150], 'red');
 
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2A', 'ic7408_2A02', [0, 0, 1, -1, 47.5, 110.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2A', 'ic7408_2A03', [0, 0, 1, -1, 47.5, 124], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2A', 'ic7408_2A04', [0, 0, 1, -1, 47.5, 137.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2A', 'ic7408_2A05', [0, 0, 1, -1, 47.5, 151], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2A', 'ic7408_2A02', [0, 0, 1, -1, 45.5, 109.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2A', 'ic7408_2A03', [0, 0, 1, -1, 45.5, 123], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2A', 'ic7408_2A04', [0, 0, 1, -1, 45.5, 136.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2A', 'ic7408_2A05', [0, 0, 1, -1, 45.5, 150], 'red');
 
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2B', 'ic7408_2B02', [0, 0, 1, -1, 61, 110.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2B', 'ic7408_2B03', [0, 0, 1, -1, 61, 124], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2B', 'ic7408_2B04', [0, 0, 1, -1, 61, 137.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2B', 'ic7408_2B05', [0, 0, 1, -1, 61, 151], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2B', 'ic7408_2B02', [0, 0, 1, -1, 59, 109.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2B', 'ic7408_2B03', [0, 0, 1, -1, 59, 123], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2B', 'ic7408_2B04', [0, 0, 1, -1, 59, 136.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_2B', 'ic7408_2B05', [0, 0, 1, -1, 59, 150], 'red');
 
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_2Y', 'ic7408_2Y02', [0, 0, 1, -1, 74.5, 110.5], 'red');
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_2Y', 'ic7408_2Y03', [0, 0, 1, -1, 74.5, 124], 'red');
-        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_2Y', 'ic7408_2Y04', [0, 0, 1, -1, 74.5, 137.5], 'red');
-       ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_2Y', 'ic7408_2Y05', [0, 0, 1, -1, 74.5, 151], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_2Y', 'ic7408_2Y02', [0, 0, 1, -1, 72.5, 109.5], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_2Y', 'ic7408_2Y03', [0, 0, 1, -1, 72.5, 123], 'red');
+        ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_2Y', 'ic7408_2Y04', [0, 0, 1, -1, 72.5, 136.5], 'red');
+       ic7408.addEndPoint('green',4.2,1, 'ic7408', 'ic7408_2Y', 'ic7408_2Y05', [0, 0, 1, -1, 72.5, 150], 'red');
 
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_GND', 'ic7408_GND02', [0, 0, 1, -1, 88, 110.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_GND', 'ic7408_GND03', [0, 0, 1, -1, 88, 124], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_GND', 'ic7408_GND04', [0, 0, 1, -1, 88, 137.5], 'red');
-        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_GND', 'ic7408_GND05', [0, 0, 1, -1, 88, 151], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_GND', 'ic7408_GND02', [0, 0, 1, -1, 86, 109.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_GND', 'ic7408_GND03', [0, 0, 1, -1, 86, 123], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_GND', 'ic7408_GND04', [0, 0, 1, -1, 86, 136.5], 'red');
+        ic7408.addEndPoint('blue',4.2,1, 'ic7408', 'ic7408_GND', 'ic7408_GND05', [0, 0, 1, -1, 86, 150], 'red');
     }
 }
 
+function ic7404() {
+    var x = document.getElementById("ic7404");
+    x.style.visibility = "visible";
+    var y = document.getElementById("ic7404img");
+    y.style.visibility = "visible";
+
+    var ic7404 = new BoardController();
+    ic7404.setJsPlumbInstance(jsPlumb);
+    ic7404.setCircuitContainer('mid');
+
+    {
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_VCC', 'ic7404_VCC1', [0, 0, 1, -1, 5, 2], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_VCC', 'ic7404_VCC2', [0, 0, 1, -1, 5, 15.5], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_VCC', 'ic7404_VCC3', [0, 0, 1, -1, 5, 29], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_VCC', 'ic7404_VCC4', [0, 0, 1, -1, 5, 42.5], 'red');
+
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_6A', 'ic7404_6A01', [0, 0, 1, -1, 18.5, 2], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_6A', 'ic7404_6A02', [0, 0, 1, -1, 18.5, 15.5], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_6A', 'ic7404_6A03', [0, 0, 1, -1, 18.5, 29], 'red');
+        ic7404.addEndPoint('blue',4.2, 1,'ic7404', 'ic7404_6A', 'ic7404_6A04', [0, 0, 1, -1, 18.8, 42.5], 'red');
+
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_6Y', 'ic7404_6Y01', [0, 0, 1, -1, 32, 2], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_6Y', 'ic7404_6Y02', [0, 0, 1, -1, 32, 15.5], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_6Y', 'ic7404_6Y03', [0, 0, 1, -1, 32, 29], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_6Y', 'ic7404_6Y04', [0, 0, 1, -1, 32, 42.5], 'red');
+
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_5A', 'ic7404_5A01', [0, 0, 1, -1, 45.5, 2], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_5A', 'ic7404_5A02', [0, 0, 1, -1, 45.5, 15.5], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_5A', 'ic7404_5A03', [0, 0, 1, -1, 45.5, 29], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_5A', 'ic7404_5A04', [0, 0, 1, -1, 45.5, 42.5], 'red');
+
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_5Y', 'ic7404_5Y01', [0, 0, 1, -1, 59, 2], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_5Y', 'ic7404_5Y02', [0, 0, 1, -1, 59, 15.5], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_5Y', 'ic7404_5Y03', [0, 0, 1, -1, 59, 29], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_5Y', 'ic7404_5Y04', [0, 0, 1, -1, 59, 42.5], 'red');
+
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_4A', 'ic7404_4A01', [0, 0, 1, -1, 72.5, 2], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_4A', 'ic7404_4A02', [0, 0, 1, -1, 72.5, 15.5], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_4A', 'ic7404_4A03', [0, 0, 1, -1, 72.5, 29], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_4A', 'ic7404_4A04', [0, 0, 1, -1, 72.5, 42.5], 'red');
+
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_4Y', 'ic7404_4Y01', [0, 0, 1, -1, 86, 2], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_4Y', 'ic7404_4Y02', [0, 0, 1, -1, 86, 15.5], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_4Y', 'ic7404_4Y03', [0, 0, 1, -1, 86, 29], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_4Y', 'ic7404_4Y04', [0, 0, 1, -1, 86, 42.5], 'red');
+
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_1A', 'ic7404_1A02', [0, 0, 1, -1, 5, 109.5], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_1A', 'ic7404_1A03', [0, 0, 1, -1, 5, 123], 'red');
+        ic7404.addEndPoint('blue',4.2, 1,'ic7404', 'ic7404_1A', 'ic7404_1A04', [0, 0, 1, -1, 5, 136.5], 'red');
+       ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_1A', 'ic7404_1A05', [0, 0, 1, -1, 5, 150], 'red');
+
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_1Y', 'ic7404_1Y02', [0, 0, 1, -1, 18.5, 109.5], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_1Y', 'ic7404_1Y03', [0, 0, 1, -1, 18.5, 123], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_1Y', 'ic7404_1Y04', [0, 0, 1, -1, 18.5, 136.5], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_1Y', 'ic7404_1Y05', [0, 0, 1, -1, 18.5, 150], 'red');
+
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_2A', 'ic7404_2A02', [0, 0, 1, -1, 32, 109.5], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_2A', 'ic7404_2A03', [0, 0, 1, -1, 32, 123], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_2A', 'ic7404_2A04', [0, 0, 1, -1, 32, 136.5], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_2A', 'ic7404_2A05', [0, 0, 1, -1, 32, 150], 'red');
+
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_2Y', 'ic7404_2Y02', [0, 0, 1, -1, 45.5, 109.5], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_2Y', 'ic7404_2Y03', [0, 0, 1, -1, 45.5, 123], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_2Y', 'ic7404_2Y04', [0, 0, 1, -1, 45.5, 136.5], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_2Y', 'ic7404_2Y05', [0, 0, 1, -1, 45.5, 150], 'red');
+
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_3A', 'ic7404_3A02', [0, 0, 1, -1, 59, 109.5], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_3A', 'ic7404_3A03', [0, 0, 1, -1, 59, 123], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_3A', 'ic7404_3A04', [0, 0, 1, -1, 59, 136.5], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_3A', 'ic7404_3A05', [0, 0, 1, -1, 59, 150], 'red');
+
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_3Y', 'ic7404_3Y02', [0, 0, 1, -1, 72.5, 109.5], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_3Y', 'ic7404_3Y03', [0, 0, 1, -1, 72.5, 123], 'red');
+        ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_3Y', 'ic7404_3Y04', [0, 0, 1, -1, 72.5, 136.5], 'red');
+       ic7404.addEndPoint('green',4.2,1, 'ic7404', 'ic7404_3Y', 'ic7404_3Y05', [0, 0, 1, -1, 72.5, 150], 'red');
+
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_GND', 'ic7404_GND02', [0, 0, 1, -1, 86, 109.5], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_GND', 'ic7404_GND03', [0, 0, 1, -1, 86, 123], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_GND', 'ic7404_GND04', [0, 0, 1, -1, 86, 136.5], 'red');
+        ic7404.addEndPoint('blue',4.2,1, 'ic7404', 'ic7404_GND', 'ic7404_GND05', [0, 0, 1, -1, 86, 150], 'red');
+    }
+}
 
 function ic7432() {
     var x = document.getElementById("ic7432");
     x.style.visibility = "visible";
     var y = document.getElementById("ic7432img");
     y.style.visibility = "visible";
+
     var ic7432 = new BoardController();
     ic7432.setJsPlumbInstance(jsPlumb);
     ic7432.setCircuitContainer('mid');
@@ -444,6 +518,7 @@ function ic7432() {
         ic7432.addEndPoint('green',4.2,1, 'ic7432', 'ic7432_2Y', 'ic7432_2Y04', [0, 0, 1, -1, 72.5, 134.5], 'red');
         ic7432.addEndPoint('green',4.2,1, 'ic7432', 'ic7432_2Y', 'ic7432_2Y05', [0, 0, 1, -1, 72.5, 148], 'red');
 
+  //      ic7432.addEndPoint('blue',4.2,1, 'ic7432', 'ic7432_GND', 'ic7432_GND01', [0, 0, 1, -1, 86, 94], 'red');
         ic7432.addEndPoint('blue',4.2,1, 'ic7432', 'ic7432_GND', 'ic7432_GND02', [0, 0, 1, -1, 86, 107.5], 'red');
         ic7432.addEndPoint('blue',4.2,1, 'ic7432', 'ic7432_GND', 'ic7432_GND03', [0, 0, 1, -1, 86, 121], 'red');
         ic7432.addEndPoint('blue',4.2,1, 'ic7432', 'ic7432_GND', 'ic7432_GND04', [0, 0, 1, -1, 86, 134.5], 'red');
@@ -459,16 +534,18 @@ function led1() {
     led.setJsPlumbInstance(jsPlumb);
     led.setCircuitContainer('mid');
 
-    led.addEndPoint('blue',4.2,1, 'led', 'led_C', 'led_C02', [0, 0, 1, -1, 64.5, 97], 'red');
-    led.addEndPoint('blue',4.2,1, 'led', 'led_C', 'led_C03', [0, 0, 1, -1, 64.5, 110.5], 'red');
-    led.addEndPoint('blue',4.2,1, 'led', 'led_C', 'led_C04', [0, 0, 1, -1, 64.5, 124], 'red');
-    led.addEndPoint('blue',4.2,1, 'led', 'led_C', 'led_C05', [0, 0, 1, -1, 64.5, 137.5], 'red');
 
-    led.addEndPoint('blue',4.2,1, 'led', 'led_A', 'led_A02', [0, 0, 1, -1, 52, 97], 'red');
-    led.addEndPoint('blue',4.2,1, 'led', 'led_A', 'led_A03', [0, 0, 1, -1, 52, 110.5], 'red');
-    led.addEndPoint('blue',4.2,1, 'led', 'led_A', 'led_A04', [0, 0, 1, -1, 52, 124], 'red');
-    led.addEndPoint('blue',4.2,1, 'led', 'led_A', 'led_A05', [0, 0, 1, -1, 52, 137.5], 'red');
+    led.addEndPoint('blue',4.2,1, 'led', 'led_A', 'led_A02', [0, 0, 1, -1, 38.5, 98.5], 'red');
+    led.addEndPoint('blue',4.2,1, 'led', 'led_A', 'led_A03', [0, 0, 1, -1, 38.5, 112], 'red');
+    led.addEndPoint('blue',4.2,1, 'led', 'led_A', 'led_A04', [0, 0, 1, -1, 38.5, 125.5], 'red');
+    led.addEndPoint('blue',4.2,1, 'led', 'led_A', 'led_A05', [0, 0, 1, -1, 38.5, 139], 'red');
 
+    led.addEndPoint('blue',4.2,1, 'led', 'led_C', 'led_C02', [0, 0, 1, -1, 54.5, 98.5], 'red');
+    led.addEndPoint('blue',4.2,1, 'led', 'led_C', 'led_C03', [0, 0, 1, -1, 54.5, 112], 'red');
+    led.addEndPoint('blue',4.2,1, 'led', 'led_C', 'led_C04', [0, 0, 1, -1, 54.5, 125.5], 'red');
+    led.addEndPoint('blue',4.2,1, 'led', 'led_C', 'led_C05', [0, 0, 1, -1, 54.5, 139], 'red');
+    document.getElementById("checkbutton").disabled=false;
+    
 }
 
 function supply() {
@@ -478,26 +555,9 @@ function supply() {
     var supply = new BoardController();
     supply.setJsPlumbInstance(jsPlumb);
     supply.setCircuitContainer('mid');
- 
 
     supply.addEndPoint('red',9,1, 'supply', 'VCC', 'VCC', [0, 0, 0,0, 60, 62], 'blue');
-    supply.addEndPoint('black',9,1, 'supply', 'GND', 'GND', [0, 0, 0, 0, 115, 62], 'red');
-}
-function led2() {
-    var x = document.getElementById("led1");
-    x.style.visibility = "visible";
-    var led = new BoardController();
-    led.setJsPlumbInstance(jsPlumb);
- 
-    led.addEndPoint('blue',4.2,1, 'led1', 'led_C1', 'led_C102', [0, 0, 1, -1, 62.5, 97], 'red');
-    led.addEndPoint('blue',4.2,1, 'led1', 'led_C1', 'led_C103', [0, 0, 1, -1, 62.5, 110.5], 'red');
-    led.addEndPoint('blue',4.2,1, 'led1', 'led_C1', 'led_C104', [0, 0, 1, -1, 62.5, 124], 'red');
-    led.addEndPoint('blue',4.2,1, 'led1', 'led_C1', 'led_C105', [0, 0, 1, -1, 62.5, 137.5], 'red');
-    //led.addEndPoint('red'4.2,1, 'led1', 'led_A1', 'led_A101', [0, 0, 0, 1, 16.5, 62], 'red');
-    led.addEndPoint('blue',4.2,1, 'led1', 'led_A1', 'led_A102', [0, 0, 1, -1, 50, 97], 'red');
-    led.addEndPoint('blue',4.2,1, 'led1', 'led_A1', 'led_A103', [0, 0, 1, -1, 50, 110.5], 'red');
-    led.addEndPoint('blue',4.2,1, 'led1', 'led_A1', 'led_A104', [0, 0, 1, -1, 50, 124], 'red');
-   led.addEndPoint('blue',4.2,1, 'led1', 'led_A1', 'led_A105', [0, 0, 1, -1, 50, 137.5], 'red');
+    supply.addEndPoint('green',9,1, 'supply', 'GND', 'GND', [0, 0, 0, 0, 115, 62], 'red');
 }
 
 
@@ -506,6 +566,7 @@ function myFunction() {
 }
 
 // Close the dropdown menu if the user clicks outside of it
+
 
 
 
@@ -520,26 +581,21 @@ function check1()                     //CHECK IF THE TABLE FILLED IS RIGHT OR NO
                 var g=document.getElementById("cell7");
                 var h=document.getElementById("cell8");
          
-           
- if(h.value=="1"  && g.value=="0"  && f.value=="0"  && e.value=="0"  && d.value=="1" && c.value=="1" && a.value=="0" && b.value=="1" )
+                   
+   if(h.value=="1"  && g.value=="0"  && f.value=="1"  && e.value=="1"  && d.value=="0" && c.value=="0" && a.value=="0" && b.value=="0" )
             { 
-                  alert("Right data. Now you can proceed to simulation.");
+                  alert("Right data. Now you can proceed to simulation."); 
                   document.getElementById("second").disabled=false;
-                  document.getElementById("second").style.cursor="pointer";  
-                        
-                        
+                  document.getElementById("second").style.cursor="pointer";
+                      
+                       
+                       // document.getElementById("checkbutton").disabled=false;
+                                                  
               
                }
-    else if( d.value=="1" && c.value=="0" && a.value=="0" && b.value=="0")
-                 {
-                alert("Please fill the alarm table.");
-                 }
-      else if (e.value=="0" && f.value=="1" && g.value=="1"&& h.value=="1" )
-                  {
-                    alert("Please fill the extinguisher table.");
-                  }
+      
 
-      else if(h.value==""  && g.value==""  && f.value==""  && e.value==""  && d.value=="" && c.value=="" && a.value=="" && b.value==""  )
+    else if(h.value==""  && g.value==""  && f.value==""  && e.value==""  && d.value=="" && c.value=="" && a.value=="" && b.value==""  )
                {
             alert("Please fill the table.");
            }
@@ -555,21 +611,26 @@ function check1()                     //CHECK IF THE TABLE FILLED IS RIGHT OR NO
 
               } 
 
+
                function reset1()                    //RESET ALL THE VALUES FILLED IN TABLE//
           {
-                 if(confirm("Do you want to reset the table?")){
-      
-               document.getElementById("cell1").value='';
-               document.getElementById("cell2").value='';
+                if(confirm("Do you want to reset the table?")){
+         
+        
+                document.getElementById("cell1").value='';
+                document.getElementById("cell2").value='';
+
                document.getElementById("cell3").value='';
+
                document.getElementById("cell4").value='';
+
                document.getElementById("cell5").value='';
                document.getElementById("cell6").value='';
                document.getElementById("cell7").value='';
                document.getElementById("cell8").value='';
          }
-}
 
+}
          function change()                               //function for IMAGE OF A CHANGE ON CLCIKING ON IMAGE//
            {
           var img=document.getElementById("switch1").src;
@@ -606,6 +667,25 @@ function change1()                          //function for IMAGE OF B CHANGE//
 
              }
            }
+           function change2()                          //function for IMAGE OF B CHANGE//
+           {
+            var img=document.getElementById("switch3").src;
+            if(img.indexOf('toggleoff1')!= -1)
+            {
+                document.getElementById("switch3").src="images/toggleon.png";
+            }
+                else
+                {
+                       document.getElementById("switch3").src="images/toggleoff1.png";
+                       
+             }
+              if(isstartedsimulation){
+              afterSimulation();
+              afterSimulation1();
+
+             }
+           }
+
 
 
 
@@ -617,39 +697,62 @@ function afterSimulation()
            
                   var img1=document.getElementById("switch1").src;
            var img2=document.getElementById("switch2").src;
-           
+                var img3=document.getElementById("switch3").src;
                
 
-            if(img1.indexOf('toggleoff1')!= -1 && img2.indexOf('toggleoff1')!= -1)
+            if(img1.indexOf('toggleoff1')!= -1 && img2.indexOf('toggleoff1')!= -1 && img3.indexOf('toggleoff1')!= -1)
             {
                 document.getElementById("led2").src="images/led.png";
-                document.getElementById("led3").src="images/led.png";
+               
             }
-                else if(img1.indexOf('toggleoff1')!= -1 && img2.indexOf('toggleon')!= -1 )
-              {new Audio('images/alarm.mp3').play();
-                       document.getElementById("led2").src="images/led1.png";
-                       document.getElementById("led3").src="images/led.png";
+                else if(img1.indexOf('toggleoff1')!= -1&& img2.indexOf('toggleoff1')!= -1 && img3.indexOf('toggleon')!= -1 )
+              {
+                       document.getElementById("led2").src="images/led.png";
+                   
                        
              }  
-                else if(img1.indexOf('toggleon')!= -1 && img2.indexOf('toggleoff1')!= -1 )
-              {new Audio('images/alarm.mp3').play();
-                       document.getElementById("led2").src="images/led1.png";
-                       document.getElementById("led3").src="images/led.png";
+                else if(img1.indexOf('toggleoff1')!= -1 && img2.indexOf('toggleon')!= -1 && img3.indexOf('toggleoff1')!= -1 )
+              {
+                       document.getElementById("led2").src="images/led.png";
+                      
                        
              } 
-                else if(img1.indexOf('toggleon')!= -1 && img2.indexOf('toggleon')!= -1 )
-              {new Audio('images/alarm.mp3').play();
+                else if(img1.indexOf('toggleoff1')!= -1 && img2.indexOf('toggleon')!= -1 && img3.indexOf('toggleon')!= -1 )
+              {
+                       document.getElementById("led2").src="images/led.png";
+                     
+             }
+              else if(img1.indexOf('toggleon')!= -1 && img2.indexOf('toggleoff1')!= -1 && img3.indexOf('toggleoff1')!= -1)
+            {  new Audio('./alarm.mp3').play();
+                document.getElementById("led2").src="images/led1.png";
+             
+               
+            }
+                else if(img1.indexOf('toggleon')!= -1&& img2.indexOf('toggleoff1')!= -1 && img3.indexOf('toggleon')!= -1 )
+                    
+                    
+              {   new Audio('./alarm.mp3').play();
                        document.getElementById("led2").src="images/led1.png";
-                       document.getElementById("led3").src="images/led1.png";
+                   
                        
+             }  
+                else if(img1.indexOf('toggleon')!= -1 && img2.indexOf('toggleon')!= -1 && img3.indexOf('toggleoff1')!= -1 )
+              {
+                       document.getElementById("led2").src="images/led.png";
+                      
                        
+             } 
+                else if(img1.indexOf('toggleon')!= -1 && img2.indexOf('toggleon')!= -1 && img3.indexOf('toggleon')!= -1 )
+              {  new Audio('./alarm.mp3').play();
+                       document.getElementById("led2").src="images/led1.png";
+                      
+                     
              }
              else
              {
                       document.getElementById("led2").src="images/led.png";
              }  
        }
-
 
 function afterSimulation1()
 
@@ -657,139 +760,178 @@ function afterSimulation1()
            
                   var img1=document.getElementById("switch1").src;
            var img2=document.getElementById("switch2").src;
-           
+                var img3=document.getElementById("switch3").src;
                
 
-            if(img1.indexOf('toggleoff1')!= -1 && img2.indexOf('toggleoff1')!= -1)
+            if(img1.indexOf('toggleoff1')!= -1 && img2.indexOf('toggleoff1')!= -1 && img3.indexOf('toggleoff1')!= -1)
             {
-                document.getElementById("cell1").style="background-color: yellow;text-align:center;font-weight: bolder; color:black";
-                document.getElementById("cell5").style="background-color: yellow;text-align:center;font-weight: bolder; color:black";
                 document.getElementById("cell2").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell3").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell4").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell6").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell7").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell8").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell3").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell4").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell5").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell6").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell7").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell8").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell1").style ="background-color: yellow;text-align:center;font-weight: bolder; color: black";
+               
             }
-                else if(img1.indexOf('toggleoff1')!= -1 && img2.indexOf('toggleon')!= -1 )
-              {new Audio('images/alarm.mp3').play();
-                       document.getElementById("cell2").style="background-color: yellow;text-align:center;font-weight: bolder; color:black";
-                       document.getElementById("cell6").style="background-color: yellow;text-align:center;font-weight: bolder; color:black";
-                 document.getElementById("cell1").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell3").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell4").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell5").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell7").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell8").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+                else if(img1.indexOf('toggleoff1')!= -1&& img2.indexOf('toggleoff1')!= -1 && img3.indexOf('toggleon')!= -1 )
+              {
+                       document.getElementById("cell1").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell3").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell4").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell5").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell6").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell7").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell8").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+                document.getElementById("cell2").style ="background-color: yellow;text-align:center;font-weight: bolder; color: black";
+                   
+                       
              }  
-                else if(img1.indexOf('toggleon')!= -1 && img2.indexOf('toggleoff1')!= -1 )
-              {new Audio('images/alarm.mp3').play();
-                       document.getElementById("cell3").style="background-color: yellow;text-align:center;font-weight: bolder; color:black";
-                       document.getElementById("cell7").style="background-color: yellow;text-align:center;font-weight: bolder; color:black";
-                                       document.getElementById("cell2").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell1").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell4").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell6").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell5").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell8").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+                else if(img1.indexOf('toggleoff1')!= -1 && img2.indexOf('toggleon')!= -1 && img3.indexOf('toggleoff1')!= -1 )
+              {
+                       document.getElementById("cell1").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell2").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell4").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell5").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell6").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell7").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell8").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+                document.getElementById("cell3").style ="background-color: yellow;text-align:center;font-weight: bolder; color: black";
+                      
                        
              } 
-                else if(img1.indexOf('toggleon')!= -1 && img2.indexOf('toggleon')!= -1 )
-              {new Audio('images/alarm.mp3').play();
-                       document.getElementById("cell4").style="background-color: yellow;text-align:center;font-weight: bolder; color:black";
-                       document.getElementById("cell8").style="background-color: yellow;text-align:center;font-weight: bolder; color:black";
-                                       document.getElementById("cell2").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell3").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell1").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell5").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell6").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                document.getElementById("cell7").style="background-color: white;text-align:center;font-weight: bolder; color:red";
-                       
-                       
+                else if(img1.indexOf('toggleoff1')!= -1 && img2.indexOf('toggleon')!= -1 && img3.indexOf('toggleon')!= -1 )
+              {
+                       document.getElementById("cell1").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell3").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell2").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell5").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell6").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell7").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell8").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+                document.getElementById("cell4").style ="background-color: yellow;text-align:center;font-weight: bolder; color: black";
+                     
              }
-             else
-             {
-                      document.getElementById("led2").src="images/led.png";
+              else if(img1.indexOf('toggleon')!= -1 && img2.indexOf('toggleoff1')!= -1 && img3.indexOf('toggleoff1')!= -1)
+            {  document.getElementById("cell2").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell3").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell4").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell1").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell6").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell7").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell8").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+                document.getElementById("cell5").style ="background-color: yellow;text-align:center;font-weight: bolder; color: black";
+             
+               
+            }
+                else if(img1.indexOf('toggleon')!= -1&& img2.indexOf('toggleoff1')!= -1 && img3.indexOf('toggleon')!= -1 )
+                    
+                    
+              {    document.getElementById("cell2").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell3").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell4").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell5").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell1").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell7").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell8").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+                document.getElementById("cell6").style ="background-color: yellow;text-align:center;font-weight: bolder; color: black";
+                   
+                       
              }  
+                else if(img1.indexOf('toggleon')!= -1 && img2.indexOf('toggleon')!= -1 && img3.indexOf('toggleoff1')!= -1 )
+              {
+                       document.getElementById("cell2").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell3").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell4").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell5").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell6").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell1").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell8").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+                document.getElementById("cell7").style ="background-color: yellow;text-align:center;font-weight: bolder; color: black";
+                      
+                       
+             } 
+                else if(img1.indexOf('toggleon')!= -1 && img2.indexOf('toggleon')!= -1 && img3.indexOf('toggleon')!= -1 )
+              {   document.getElementById("cell2").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell3").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell4").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell5").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell6").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell7").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+            document.getElementById("cell1").style="background-color: white;text-align:center;font-weight: bolder; color:red";
+                document.getElementById("cell8").style ="background-color: yellow;text-align:center;font-weight: bolder; color: black";                      
+                     
+             }
+             
        }
  function start_simulation()
         { 
           isstartedsimulation = true;
           document.getElementById("switch1").onclick = function() {change()};
          document.getElementById("switch2").onclick = function() {change1()};
-            document.getElementById("cell1").style="background-color: yellow;text-align:center;font-weight: bolder; color:black";
-                document.getElementById("cell5").style="background-color: yellow;text-align:center;font-weight: bolder; color:black";
-      
+      document.getElementById("switch3").onclick = function() {change2()};
           document.getElementById("led2").src="images/led.png";
-           document.getElementById("led3").src="images/led.png";
+                document.getElementById("cell1").style ="background-color: yellow;text-align:center;font-weight: bolder; color: black";
+          
 
          }
 
 
 
+
+         window.onload = function() {
+          var reloading = sessionStorage.getItem("reloading");
+          if (reloading) {
+              sessionStorage.removeItem("reloading");
+             document.getElementById("cell1").value="0";
+      document.getElementById("cell2").value="0";
+      document.getElementById("cell3").value="0";
+      document.getElementById("cell4").value="0";
+      document.getElementById("cell5").value="1";
+      document.getElementById("cell6").value="1";
+      document.getElementById("cell7").value="0";
+      document.getElementById("cell8").value="1";
+      document.getElementById("startbutton").disabled=true;
       
-       window.onload = function() {
-    var reloading = sessionStorage.getItem("reloading");
-    if (reloading) {
-        sessionStorage.removeItem("reloading");
-       document.getElementById("cell1").value="0";
-document.getElementById("cell2").value="1";
-document.getElementById("cell3").value="1";
-document.getElementById("cell4").value="1";
-document.getElementById("cell5").value="0";
-document.getElementById("cell6").value="0";
-document.getElementById("cell7").value="0";
-document.getElementById("cell8").value="1";
-document.getElementById("startbutton").disabled=true;
+      
+        document.getElementById("switch1").src="images/toggleoff1.png";
+        document.getElementById("switch2").src="images/toggleoff1.png";
+      
+        document.getElementById("switch1").onclick=function(){change3()};
+        document.getElementById("switch2").onclick=function(){change4()};
+        document.getElementById("switch3").onclick=function(){change5()};
+        document.getElementById("second").disabled=false;
+        document.getElementById("second").style.cursor="pointer"; 
+         
+                               document.getElementById("checkbutton").disabled=false;
+                                
+                             // document.getElementById("resetbutton").disabled=false;
+       
+        document.getElementById("led2").src="images/led.png";
+             breadboard();
+             inputs();
+             ic7408();
+             ic7432();
+             ic7404();
+             led1();
+             supply();
+          }
+      }
+      
+      function resetCircuit() {
+       // sessionStorage.setItem("reloading", "true");
+       if(confirm("Do you want to reset?")){
+        sessionStorage.setItem("reloading", "true");    
+         document.location.reload();
+         isstartedsimulation=false;
+       }
+      }
 
-
-  document.getElementById("switch1").src="images/toggleoff1.png";
-  document.getElementById("switch2").src="images/toggleoff1.png";
-
-  document.getElementById("switch1").onclick=function(){change3()};
-  document.getElementById("switch2").onclick=function(){change4()};
-  document.getElementById("second").disabled=false;
-  document.getElementById("second").style.cursor="pointer"; 
    
-                       
-                         document.getElementById("checkbutton").disabled=false;
-                          
-                      //  document.getElementById("resetbutton").disabled=false;
-              
-  document.getElementById("led2").src="images/led.png";
-       breadboard();
-       inputs();
-       ic7408();
-       ic7432();
-       led1();
-       led2();
-       supply();
-    }
-}
 
-function resetCircuit() {
-	
-   // sessionStorage.setItem("reloading", "true");
-   if(confirm("Do you want to reset?"))
-   {
-    sessionStorage.setItem("reloading", "true");
-    document.location.reload(); 
-    isstartedsimulation=false;
-
-    
- } 
-
-}
-function Alert()
-{
-  alert("Fill the truth table");
-}
-
-  
-
-
-
-         function change3()
+         
+function change3()
 {var img=document.getElementById("switch1").src;
             if(img.indexOf('toggleoff1')!= -1)
             {
@@ -811,6 +953,19 @@ function change4()
                 else
                 {
                        document.getElementById("switch2").src="images/toggleoff1.png";
+                       
+             }
+             
+}
+function change5()
+{var img=document.getElementById("switch3").src;
+            if(img.indexOf('toggleoff1')!= -1)
+            {
+                document.getElementById("switch3").src="images/toggleoff1.png";
+            }
+                else
+                {
+                       document.getElementById("switch3").src="images/toggleoff1.png";
                        
              }
              

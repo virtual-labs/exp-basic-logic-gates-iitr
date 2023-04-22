@@ -2,96 +2,167 @@
 #### Please attempt the following questions
 
 
-Q1. Which gate is also known as nothing or all gate?  
+Q1. Which gate is known as ‘any or all gate'?  
+
+<b>A     OR gate</b>  
+B     AND gate  
+C     EX-OR gate  
+D     NOT gate  
+<br>
+
+
+Q2. Select the incorrect input and output pin combination in IC 7432  
+
+A     Input 1, 2 output 3  
+B     Input 4, 5 output 6  
+<b>C     Input 8, 9 output 10</b>  
+D     Input 13, 12 output 11  
+<br>
+
+ 
+Q3. Which gate is known as ‘all or nothing gate’ ?  
 
 A     OR gate  
 <b>B     AND gate</b>  
-C     NAND gate  
-D     NOT gate  
-<br>
-    
-
-Q2. The output of the two-input NAND gate is high  
-
-A     Only if both the inputs are high  
-B     Only if both the inputs are low  
-C     Only if one input is high and the other is low  
-<b>D     If at least one input is low</b>  
+C     XNOR gate  
+D     NAND gate  
 <br>
 
-
-Q3. An exclusive NOR gate is logically equal to  
-
-A     Inverter followed by an XOR gate  
-B     NOT gate followed by an exclusive XOR gate  
-<b>C     Exclusive OR gate followed by an inverter</b>  
-D     The complement of a NOR gate  
-<br>
-
-
-Q4. Maximum number of input lines in practical NOR gate IC is \_\_\_\_\_\_\_.  
-
-<b>A     11</b>  
-B     Zero  
-C     Infinite  
-D     3  
-<br>
   
+Q4. Indicate which of following gates can be used to realize all the possible combinational logic functions  
 
-Q5. Digital circuits can be made by the repeated use of \_\_\_\_\_\_\_\_.  
+A     OR gate only  
+B     AND gate only  
+<b>C     NOR gate only</b>  
+D     Ex-OR gate only  
+<br>
 
-A     OR gates  
-B     NOT gates  
-<b>C     NAND gates</b>  
+    
+Q5. How do you make an NOR gate out of a NAND gate using inverters (NOT gates)?  
+
+A     Invert the output from the NAND gate  
+B     Invert both the inputs to the NAND gate  
+C     Invert one of the inputs to the NAND gate  
+<b>D     Invert both the inputs and output of the NAND gate</b>  
+<br>
+
+ 
+Q6. Which of the following gates is known as coincidence detector?  
+
+<b>A     AND gate</b>  
+B     OR gate  
+C     NOT gate  
+D     NAND gate  
+<br>
+
+   
+Q7. For a Boolean expression Y=A’(AB’+A’), the output is high  
+
+A     When input B is high  
+B     When input B is low  
+<b>C     It is independent of input B</b>  
 D     None of the above  
 <br>
 
+ 
+Q8. The Boolean expression for the output F1 is F<sub>1</sub>=XYZ' + XY'Z + X'YZ + X'Y'Z'. This is \_\_\_\_\_\_\_\_ form.  
 
-Q6. The minimum number of NAND gates required to implement the Boolean function A + AB’ + AB’C is equal to  
-
-<b>A     Zero</b>  
-B     1  
-C     4  
-D     7  
+A     Product of sum  
+<b>B     Sum of product</b>  
+C     Straight  
+D     None of the above  
 <br>
 
+   
+Q9. The only function of NOT gate is to \_\_\_\_\_\_\_\_\_\_  
 
-Q7. The output of the logic gate shown is  
-![](images/que7pre.png)  
-
-A     0  
-B     1  
-C     A  
-<b>D     A’</b>  
+A     Stop signal  
+<b>B     Invert input signal</b>  
+C     Act as a universal gate  
+D     None of the above  
 <br>
 
+  
+Q10. What type of logic gate's behavior does this truth table represent?  
 
-Q8. For the logic circuit shown in the figure, the required input combination (A,B,C) to make the output X = 1 is  
-![](images/que8pre.png)  
+<table style="text-align:center;width:200;color:black;margin-left:3%">
+<tr style="border:1px solid black;font-size:100%;border-collapse:collapse;">
+<th colspan="4"; style="border:1px solid black;border-collapse:collapse;text-align:center">?</th>
+</tr>
 
-A     1, 0, 1  
-B     0, 0, 1  
-C     1, 1, 1  
-<b>D     0, 1, 1</b>  
-<br>
+<tr>
+<th style="border:1px solid black;font-size:100%;border-collapse:collapse;">A</th>
+<th style="border:1px solid black;font-size:100%;border-collapse:collapse;">B</th>
+<th style="border:1px solid black;font-size:100%;border-collapse:collapse;">C</th>
+<th style="border:1px solid black;font-size:100%;border-collapse:collapse;">?</th>
+</tr>
+
+<tr>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">0</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">0</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">0</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">0</td>
+</tr>
+
+<tr>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">0</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">0</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+</tr>
+
+<tr>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">0</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">0</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+</tr>
+
+<tr>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">0</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+</tr>
+
+<tr>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">0</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">0</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+</tr>
+
+<tr>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">0</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+</tr>
+
+<tr>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">0</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+</tr>
+
+<tr>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+<td style="border:1px solid black;font-size:100%;border-collapse:collapse;">1</td>
+</tr>
+
+</table></center><br>
+
+  
+A     2 input OR gate  
+<b>B     3 input OR gate</b>  
+C     3 input EXOR gate  
+D     4 input EXOR gate  
 
 
-Q9. The output F in the digital logic circuit shown in the figure is  
-![](images/que9pre.png)  
 
-<b>A     X’YZ + XY’Z</b>  
-B     X’YZ’+ XY’Z’  
-C     X’Y’Z + XYZ  
-D     X’Y’Z’ + XYZ  
-<br>
-
-
-Q10. \_\_\_\_\_\_\_\_\_ NOT circuits contained in a 7404 IC  
-
-A     4  
-B     3  
-<b>C     6</b>  
-D     2  
 
 
  
