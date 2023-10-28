@@ -532,6 +532,13 @@ a
 
 }
 */
+
+button:disabled
+{
+    cursor: not-allowed;
+    opacity:0.6;
+}
+
 .bottom {
     position: absolute;
     height: 60px;
@@ -548,9 +555,8 @@ a
     border: none;
     font-weight: bold;
     border-radius: 25px;
-    cursor: pointer;
     border-color: black;
-  
+    color: white;
 }
 
 #checkbutton                                      /*      check connections buttton  */
@@ -559,7 +565,7 @@ a
     border: 2px rgb(0, 168, 8) solid;
     background: rgb(0, 168, 8);  
     font-weight: bolder;
-    
+   
 }
 #checkbutton:hover                                  
 {
@@ -573,7 +579,7 @@ a
     border: 2px #5433FF solid;
     background: #5433FF;
     font-weight: bolder;
-    
+  
 
 }
 #startbutton:hover
