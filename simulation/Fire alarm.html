@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Alarm Simulation</title>
+
+    <!--JSplumb-->
+    <link rel="stylesheet" href="css\jsplumbtoolkit-defaults.css">
+    <script src="js\jsplumb.min.js"></script>
+
+    <script src="js\jquery-latest.js"></script>
+    <script src="js\jquery-ui-latest.js"></script>
+    <script src="js\jquery.jsPlumb-1.3.9-all-min.js"></script>
+
+
+    <!--jQuery-->
+    <script src="js\jquery.min.js"></script>
+
+    <!--JS files-->
+    <script src="js/script1.js"></script>
+    <script src="js/graph.js"></script> 
+
+    <!--CSS files-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="exp-name">
+        <h3>Fire alarm using basic logic gates</h3>
+    </div>
+
+ 
+<div id="simulation">
+    <div class="left">      
+
+            <div class="border" id="mid">
+
+                    <div id="board">
+                        <div class="ic" id="ic7432" draggable="true">
+                         
+                            <label  style="font-size: 13px; z-index:1 ; color: red; position: absolute; top: 153px;left:160px;">1</label>  
+                            <label   style="font-size: 13px; z-index:1 ; color: red; position: absolute; top: 153px;left:240px;">7</label>
+                            <label  style="font-size: 13px;  z-index:1; color: red; position: absolute;top: 135px;left: 160px;">14</label>
+                            <label  style="font-size: 13px;  z-index:1 ;color: red; position: absolute; top: 135px;left:240px;">8</label>
+                        </div>
+
+                        <div class="ic" id="ic7408" draggable="true">
+                            <label style="font-size: 10px;  color: red; z-index:2; position: absolute; top: 84px;left: 6px;">1</label>  
+                        <label style="font-size: 10px;  color: red; z-index:2; position: absolute; top: 84px;left: 90px;">7</label>
+                        <label style="font-size: 10px;  color: red; z-index:2; position: absolute;top: 64px;left: 6px;">14</label>
+                        <label style="font-size: 10px;  color: red; z-index:2; position: absolute; top: 64px;left: 90px;">8</label>
+                        </div>
+
+             <!--         <div class="ic" id="ic7408" draggable="true"></div>-->
+                     <div id="led" draggable="true"><img src="images/led.png" id="led2" width="130px"height="90px">
+                     <label style="font-size: 18px; background-color: #fff; border-radius: 4px; color: black; position: absolute; padding: 2px; top: -22px;left:28px;"> Alarm </label>
+                     <label style="font-size: 13px;  color: black; position: absolute; top: 148px;left:48px; "><b>A</b></label>  
+                     <label style="font-size: 13px;  color: black; position: absolute; top: 148px;left:63px; "><b>C</b></label>
+                     <label style="font-size: 22px; color: red; position: absolute; top: 78px;left:37px; font-weight: bolder;">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-</label>
+                     </div>
+
+                     <div id="led1" draggable="true"> <img src="images/led.png" id="led3" width="130px"height="90px"> 
+                        <label style="font-size: 18px; background-color: #fff; border-radius: 4px; padding: 2px; color: black; position: absolute; top: -22px;left:10px;"> Extinguisher </label>
+                        <label style="font-size: 13px;  color: black; position: absolute; top: 148px;left:42px; "><b>A1</b></label>  
+                        <label style="font-size: 13px;  color: black; position: absolute; top: 148px;left:60px; "><b>C1</b></label>
+                        <label style="font-size: 22px; color: red; position: absolute; top: 78px;left:37px;font-weight: bolder;">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-</label>
+                     </div>
+                     	
+                    </div>
+             
+
+                    <div id="supply" draggable="true"><img src="images/supply.png" id="powersup" height="100px" width="155px" style="border-radius: 10px"/></div>
+                    
+                    <div id="inputs" draggable="true">
+                        <label id="a" style="left: 550px;" > A (Smoke Sensor)</label>
+                        <div id="input_A" onclick="toggle_A()"><img src="images/toggleoff1.png" id="switch1" width="40px"height="70px" onmouseover="this.style.cursor='pointer'"></div>
+                        <div id="input_B" onclick="toggle_B()"><img src="images/toggleoff1.png" id="switch2" width="40px"height="70px"onmouseover="this.style.cursor='pointer'"></div>
+                        <label id="b">B (Heat Sensor)</label>
+                    </div>
+
+
+                    <div class="bottom">
+                        <button id="checkbutton" onclick="checkCircuit()"disabled>Check Connections</button>
+                        <button id="startbutton" onclick="start_simulation()"disabled>Start Simulation</button>
+                        <button id="resetbutton" onclick="resetCircuit()"disabled>Reset Connections </button>
+                      </div>
+
+         
+            </div></div>
+
+       <img src="images/ic7432.png" id="ic7432img" height="45px" width="100px">
+       <img src="images/ic7408.png" id="ic7408img" height="45px" width="100px">  
+          
+       <div class="right">
+        <div>
+            <button class="right_btn" id="First">Instructions</button>
+            <button class="right_btn com" id="second" disabled>Components</button>
+            <div class="Button-data" id="First_Data" style="display: none">
+                <div class="panel">
+                    <button class="close-btn" id="close-btn"><span>&#10005</span></button>
+                   <div id="first_insrt">
+                    <ol type="1" style="padding: 10px; text-align: left;">
+                      <li>Fill the truth table and click on <b>'CHECK'</b> button.</li>
+                        <li>Click on the components button to place the component.</li>               
+                        <li>Make connections as per the circuit diagram.</li>
+                        <figure align="center">
+                          <img src="images/image1ins.png">
+                          <figcaption style="text-align:center;">Fig. 1 Circuit diagram of fire alarm using logic gate ICs.</figcaption><br>
+                          <img src="images/image2ins.png">
+                          <figcaption style="text-align:center;">Fig. 2 Pin diagram of IC-7408.</figcaption>
+                     <br>
+                     <img src="images/image3ins.png">
+                     <figcaption style="text-align:center;">Fig. 3 Pin diagram of IC-7432.</figcaption>
+                        </figure><br/>
+                        <li>Click on '<b>Check Connections</b>' button. If connections are right, the '<b>Start Simulation</b>' button will become active. Click on it to start simulation.</li>
+                        <li>Click on the toggle switches '<b>A</b>' and '<b>B</b>' to perform simulation.</li>
+                                         
+                        </ol></div></div></div></div>
+  
+                        <div class="Button-data" id="Second_Data" style="bottom:10px">
+                          <div class="Components">
+                              <button class="close-btn" id="btn_close"><span>&#10005</span></button>
+                              <div>
+                                <button id="breadbutton" class="cmpbutton" onclick="breadboard()"> Breadboard</button>
+                                <button id="supplybutton" class="cmpbutton" onclick="supply()">5V DC Supply</button>
+                                 <button id="switchbutton" class="cmpbutton" onclick="inputs()">Digital Switches</button> 
+                              </div>
+                              <div>
+                                <button id="ic1button" class="cmpbutton" onclick="ic7432()">IC-7432</button>
+                        <button id="ic2button" class="cmpbutton" onclick="ic7408()" >IC-7408</button>   
+                        <button id="ledbutton" class="cmpbutton" onclick="led1();led2();">LED</button>
+                                   </div>
+                          </div>
+                      </div>
+       
+    <div class="mytable">  <!--truth table heading-->
+        <br>
+                    <h3 align="center"><u>TRUTH TABLE</u></br></br>Components button will remain inactive until Truth-Table is filled correctly.</h3>
+                    <table id="table" border="2px">  
+                         <!--  table for full subtractor -->
+                        <tr style="background-color: #3c8bcd">
+                            <th> &nbsp; INPUTS &nbsp;</br> &nbsp;&nbsp; A  &nbsp;  &nbsp;   &nbsp;  &nbsp; &nbsp; B&nbsp;   &nbsp;</th>
+                            
+                            <th> Alarm  </th>
+                            <th> Extinguisher </th>
+                        </tr>
+                        <tr> 
+                            <th>&nbsp;&nbsp;&nbsp;0    &nbsp;   &nbsp;   &nbsp;  &nbsp;  &nbsp; 0    &nbsp;   &nbsp;
+                            </th>
+                            
+                            
+                                <th><input type="text" style="color: red;font-weight: bolder;" class="cell" id="cell1" maxlength="1"  /></th>
+                                <th><input type="text"  style="color: red;font-weight: bolder;" class="cell" id="cell5" maxlength="1" /></th>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;&nbsp;&nbsp;0   &nbsp;    &nbsp;   &nbsp;   &nbsp; &nbsp; 1  &nbsp;   &nbsp;</th>
+                            
+                                <th><input type="text" style="color: red;font-weight: bolder;"  class="cell" id="cell2" maxlength="1" /></th>
+                                <th><input type="text" style="color: red;font-weight: bolder;" class="cell" id="cell6" maxlength="1" /></th>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;&nbsp;&nbsp;1   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;0   &nbsp;   &nbsp;   </th>
+                            
+                                <th><input type="text" style="color: red;font-weight: bolder;" class="cell" id="cell3" maxlength="1" /></th>
+                                <th><input type="text" style="color: red;font-weight: bolder;" class="cell" id="cell7" maxlength="1" /></th>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;&nbsp;&nbsp;1  &nbsp;&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;1  &nbsp;  &nbsp;  </th>
+                        
+                               <th><input type="text" style="color: red;font-weight: bolder;" class="cell" id="cell4"   maxlength="1" /></th>
+                               <th><input type="text" style="color: red;font-weight: bolder;" class="cell" id="cell8" maxlength="1" /></th>
+                        </tr>
+                       
+                    </table>
+                    <button id="check1" onclick="check1()" onmouseover="this.style.cursor='pointer'"> CHECK</button>    <!-- check button-->
+                    <button id="reset1" onclick="reset1()" onmouseover="this.style.cursor='pointer'">RESET</button>     <!-- RESET button-->
+                </div>
+               
+            </div>
+
+
+    <script src="js/script.js"></script>
+    <div>
+        <footer><b>&copy;</b> Copyright 2022 Virtual Labs, IIT Roorkee</footer>
+      </div>
+
+</html>

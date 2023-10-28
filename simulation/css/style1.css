@@ -1,0 +1,659 @@
+
+
+#exp-name {
+    width: 1360px;
+    text-align: center;
+    padding: 10px;
+    height: 40px;
+    color: #2C99CE;
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 1px solid #333;
+    font-size: 20px;
+}
+
+.left {
+    padding-top: 10px;
+    padding-left: 0px;
+    float: left;
+    width: 950px;
+    height: 550px;
+    display: block;
+}
+
+#simulation {
+    height: 590px;
+    width: 1400px;
+    display: inline-block;
+}
+.right {   
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+    border-radius: 5px;
+    background: rgb(220, 221, 148);
+    width: 420px;
+    height: 600px;
+    text-align: center;
+    display: block;
+}
+
+.right_btn {
+    height: 35px;
+    width: 180px;
+    font-size: 20px;
+    cursor: pointer;
+    background: white;
+    font-weight: 500;
+    background: #5433FF;
+    border: 2px solid #5433ff;
+    box-shadow: 0 16px 22px -17px #03153B;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.right_btn:hover {
+    background-color: #ffffff;
+    color: #5433FF;
+}
+
+
+
+
+.border {
+    border: 2px #f2f2f2 solid;
+}
+
+.panel {
+    padding: 20px 5px 10px 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Muli';
+    text-align: justify;
+    overflow: hidden;
+    height: auto;
+    width: 350px;
+    max-width: calc(100% - 10px);
+    
+}
+
+.img {
+    display: flex;
+}
+
+.panel img {
+    height: auto;
+    width: 240px;
+}
+.panel button.close-btn:focus {
+    outline: none;
+}
+.close-btn {
+    border: 0;
+    color: rgb(255, 5, 5);
+    background-color: #fff;
+    font-weight: 1200;
+    cursor: pointer;
+    font-size: 15px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border-radius: 15px;
+    
+}
+
+.panel button.close-btn:focus {
+    outline: none;
+}
+
+.Button-data {
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    overflow: hidden;
+    z-index:999;
+}
+
+.Button-data.visible {
+    transform: translateX(-10px);
+}
+
+.com{    
+    
+    cursor: not-allowed;
+      }
+      
+.Components  {
+    padding: 10px 10px 10px 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Muli';
+    text-align: justify;
+    overflow: hidden;
+    height: auto;
+    width: 400px;
+    max-width: calc(100% - 10px);
+    z-index: 999;
+    
+  }
+
+  .Components div button {
+    position: relative;
+    background-color: #2237f8;
+    border: none;
+    font-size: 15px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 12px;
+    border: 1px rgb(46, 9, 255) solid;
+    width: 120px;
+    color: #FFFFFF;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+  }
+  
+  .Components div button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+  
+  .Components div {
+    display: flex;
+    margin-top: 15px;
+  }
+  
+  li::marker {
+    font-weight: bold;
+}
+
+#mid {
+    position: absolute;
+    height: 500px;
+    width: 920px;
+    margin: 52px 60px 10px 0px;
+    border: 2px solid #d39538;   
+    box-shadow: 3px 4px 6px #888888; 
+    border-radius: 6px;
+    background-color: #f2f2f2;
+    top:40px;
+    background-image: url('../images/desk2.jpg');
+
+}
+
+.mytable
+{   
+    margin-top:20px;
+    width: 365px;
+    height:510px;    
+    margin-left:20px;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 3px 4px 6px #262626;
+}
+
+#table tr:nth-child(even){background-color: #f2f2f2;}
+#table
+{  
+    width: 320px;
+    top: 500px;
+    margin-left:20px;
+    background-color: #fff;
+}
+
+
+th
+{
+width: 70px;
+height: 30px;
+}
+.cell
+{
+    width: 50px;
+    height: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+.cell1
+{
+    width: 70px;
+    height: 20px;
+    border:2px solid black;
+    border-radius: 4px;
+    text-align: center;
+}
+#check1
+{ width: 80px;
+    height:30px;
+    border-radius: 20px;
+    border: 2px rgb(0, 168, 8) solid;
+    background: rgb(0, 168, 8);
+    color: #ffffff;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#check1:hover                                         
+{
+    color: rgb(31, 143, 36);
+    background: white;
+    font-weight: bold;
+}
+#reset1
+{	 width: 80px;
+    height:30px;
+    border-radius: 20px;
+    border: 2px rgb(255, 54, 54) solid;
+    background: rgb(255, 54, 54);
+    margin-top: 10px;
+    margin-left: 35px;
+    color: #ffffff;
+}
+
+#reset1:hover                                       
+{color: rgb(255, 54, 54);
+    background: white;
+    font-weight: bold;
+
+}
+
+/*   bread board design*/
+
+#board {
+    position: absolute;
+    margin: 10px 10px 6px;
+    height: 300px;
+    width: 890px;
+    border-radius: 5px;
+    border: 3px solid #d6d3d3;
+    box-shadow: 3px 4px 6px #888888;
+    background-image: url('../images/board.png');
+    display: block;
+    visibility: hidden;
+}
+
+
+/* Components */
+
+#led {
+
+    background-size: cover;
+    display: inline-block;
+    visibility: hidden;
+    position: absolute;
+    top: 86px;
+    left: 690px;
+}
+/*
+#led1 {
+    background-size: cover;
+    display: inline-block;
+    visibility: hidden;
+        position: absolute;
+    top: 57px;
+    left: 658px;
+}*/
+#supply {
+    height: 100px;
+    width: 155px;
+    visibility: hidden;
+    margin: 345px 0px 5px 20px;
+    padding: 10px;
+}
+/*IC Images*/
+#ic7432img
+{
+position: absolute;
+top:237px;
+left:178px;
+visibility: hidden;
+}
+#ic7404img
+{
+position: absolute;
+top:237px;
+left:408px;
+visibility: hidden;
+}
+#ic7408img
+{
+position: absolute;
+top:237px;
+left:610px;
+visibility: hidden;
+}
+
+
+#ic7432 {
+    height: 154px;
+    width: 96px;
+    margin: 73.4px 0px 0px 156.6px;
+    display: inline-block;
+    visibility: hidden;
+}
+
+
+#ic7408 {position: absolute;
+    height: 154px;
+    width: 96px;
+    top:74px;
+    left:590px;
+    display: inline-block;
+    visibility: hidden;
+}
+
+#ic7404 {
+    height: 154px;
+    width: 96px;
+    position: absolute;
+    top: 74px;
+    left:387px;
+    display: inline-block;
+    visibility: hidden;
+}
+#inputs {
+    height: 40px;
+    width: 110px;   
+    display: inline-block;
+    visibility: hidden;
+}
+
+#switch1 {
+   
+   
+   /*  background-image: url('images/toggleoff1.jpg');*/
+     position: absolute;
+           top:400px;
+        left: 400px; 
+    
+
+}
+
+#switch2 {
+    position: absolute;
+  
+  
+    /*    background-image: url('images/toggleoff1.jpg');*/
+        top:400px;
+        left: 500px; 
+  
+    
+}
+#switch3 {
+    position: absolute;
+  
+  
+    /*    background-image: url('images/toggleoff1.jpg');*/
+        top:400px;
+        left: 600px; 
+  
+    
+}
+#a
+
+{
+    position: absolute;
+    top:480px;
+    left: 400px;
+}
+#b
+
+{
+    position: absolute;
+    top:480px;
+    left: 500px;
+}
+#c
+
+{
+    position: absolute;
+    top:480px;
+    left: 620px;
+}
+
+
+/* Right Components Code here */
+
+
+.show {display:block;}
+a
+{
+    color: red;
+}
+/*
+#breadbutton                                             
+{   width: 130px;
+    height:40px;
+    background: #5433FF;
+    border: 2px solid #5433ff;
+    border-radius: 10px;
+    color: #fff;
+}
+#breadbutton:hover          
+{
+    background-color: #ffffff;
+    color: #5433FF;
+}
+#ic1button                                        
+{width: 110px;
+    height:40px;
+    background: #5433FF;
+    border: 2px solid #5433ff;
+    border-radius: 10px;
+    color: #fff;
+    
+}
+#ic1button:hover                                       
+{
+    background-color: #ffffff;
+    color: #5433FF;
+
+}
+#ic2button                                           
+{width: 110px;
+    height:40px;
+    background: #5433FF;
+    border: 2px solid #5433ff;
+    border-radius: 10px;
+    color: #fff;
+}
+#ic2button:hover                                       
+{
+    background-color: #ffffff;
+    color: #5433FF;
+}
+#ic3button                                       
+{width: 110px;
+    height:40px;
+    background: #5433FF;
+    border: 2px solid #5433ff;
+    border-radius: 10px;
+    color: #fff;
+}
+#ic3button:hover                                       
+{
+    background-color: #ffffff;
+    color: #5433FF;
+}
+#supplybutton                                          
+{   
+    width: 150px;
+    height:40px;
+    background: #5433FF;
+    border: 2px solid #5433ff;
+    border-radius: 10px;
+    color: #fff;
+}
+#supplybutton:hover
+{
+    background-color: #ffffff;
+    color: #5433FF;
+}
+#switchbutton                                        
+{   width: 170px;
+    height:40px;
+    background: #5433FF;
+    border: 2px solid #5433ff;
+    border-radius: 10px;
+    color: #fff;
+}
+#switchbutton:hover
+{
+    background-color: #ffffff;
+    color: #5433FF;
+}
+#ledbutton                                                  
+{   width: 110px;
+    height:40px;
+    background: #5433FF;
+    border: 2px solid #5433ff;
+    border-radius: 10px;
+    color: #fff;
+}
+#ledbutton:hover
+{
+    background-color: #ffffff;
+    color: #5433FF;
+
+}
+*/
+
+button:disabled
+{
+    cursor: not-allowed;
+    opacity:0.6;
+}
+
+.bottom {
+    position: absolute;
+    height: 60px;
+    text-align: center;
+    top:530px;
+  width:920px;
+}
+
+.bottom button {
+    margin: 5px 40px 10px 40px;
+    height: 35px;
+    width: 200px;
+    font-size: 15px;
+    border: none;
+    font-weight: bold;
+    border-radius: 25px;
+    border-color: black;
+    color: white;
+}
+
+#checkbutton                                      /*      check connections buttton  */
+{   
+ 
+    border: 2px rgb(0, 168, 8) solid;
+    background: rgb(0, 168, 8);  
+    font-weight: bolder;
+   
+}
+#checkbutton:hover                                  
+{
+    color: rgb(0, 168, 8);
+  background: white;
+  font-size: 16px;
+
+}
+#startbutton                                          /*      start button   */
+{ 
+    border: 2px #5433FF solid;
+    background: #5433FF;
+    font-weight: bolder;
+  
+
+}
+#startbutton:hover
+{
+    color: #5433FF;
+  background: white;
+  font-size: 16px;
+
+}
+#resetbutton                           /*reset button*/
+{   
+    border: 2px rgb(255, 54, 54) solid;
+    background: rgb(255, 54, 54);    
+    font-weight: bolder;
+    
+
+}
+#resetbutton:hover 
+{
+    color: rgb(255, 54, 54);
+  background: white;
+  font-size: 16px;
+
+}
+h3
+{
+ 
+    font-family:sans-serif;
+    width:350px; 
+    margin-left: 20px;
+    font-style: bold;
+
+}
+button
+{
+    font-size: 18px;
+    font-style: bold;
+       cursor: pointer;
+       font-family: serif;
+}
+footer
+{
+    margin-top: 30px;  
+    left:0px;
+    font-size: 18px;
+    width: 1380px;
+    height: 30px;
+    font-size: 15px;
+    padding-top: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    font-family: 'Raleway', sans-serif;
+    z-index:-2;}
+h3
+{
+  
+    margin-left: 8px;
+}
+
+#led2
+{
+    margin-left: -12px;
+    margin-top: 6px;
+}
+#connector2
+{
+    position: absolute;
+    top:2px;
+    left: 429px;
+}
+#connector1
+{
+    position: absolute;
+    top:245px;
+    left: 429px;
+}
