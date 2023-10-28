@@ -171,7 +171,10 @@ var theorem1;
 
 function checkCircuit() {
    
-    var g = new Graph(58);
+    
+     
+
+        var g = new Graph(58);
     theorem1=false;
  
   
@@ -186,6 +189,13 @@ function checkCircuit() {
         g.addEdge(connections[key].endpoints[0].getParameter('groupName'), connections[key].endpoints[1].getParameter('groupName'));
     }
    
+    var edges= (g.numberofedges);
+    console.log('edges:'+edges)
+    if(edges == 0)
+    {
+        alert("No connections present.");   
+        return;
+    }
 console.log("###noofedges->"+(g.numberofedges-deletecon));
 
   
@@ -726,6 +736,8 @@ else{
     alert("Please connect IC/led to supply properly.  ");
 }
 
+     
+    
 
 } //function bracket
 
