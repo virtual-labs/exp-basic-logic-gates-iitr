@@ -1,39 +1,10 @@
-{
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+[{"question":"Which gate is known as ‘any or all gate'?","answers":{"a":"OR gate","b":"AND gate","c":"EX-OR gate","d":"NOT gate"},"correctAnswer":"a"},
+{"question":"Select the incorrect input and output pin combination in IC 7432","answers":{"a":"Input 1, 2 output 3","b":"Input 4, 5 output 6","c":"Input 8, 9 output 10","d":"Input 13, 12 output 11"},"correctAnswer":"c"},
+{"question":"Which gate is known as ‘all or nothing gate’ ?","answers":{"a":"OR gate","b":"AND gate","c":"XNOR gate","d":"NAND gate"},"correctAnswer":"b"},
+{"question":"Indicate which of following gates can be used to realize all the possible combinational logic functions","answers":{"a":"OR gate only","b":"AND gate only","c":"NOR gate only","d":"Ex-OR gate only"},"correctAnswer":"c"},
+{"question":"How do you make an NOR gate out of a NAND gate using inverters (NOT gates)?","answers":{"a":"Invert the output from the NAND gate","b":"Invert both the inputs to the NAND gate","c":"Invert one of the inputs to the NAND gate","d":"Invert both the inputs and output of the NAND gate"},"correctAnswer":"d"},
+{"question":"Which of the following gates is known as coincidence detector?","answers":{"a":"AND gate","b":"OR gate","c":"NOT gate","d":"NAND gate"},"correctAnswer":"a"},
+{"question":"For a Boolean expression Y=A’(AB’+A’), the output is high","answers":{"a":"When input B is high","b":"When input B is low","c":"It is independent of input B","d":"None of the above"},"correctAnswer":"c"},
+{"question":"The Boolean expression for the output F1 is F\u2081=XYZ' + XY'Z + X'YZ + X'Y'Z'. This is ________ form.","answers":{"a":"Product of sum","b":"Sum of product","c":"Straight","d":"None of the above"},"correctAnswer":"b"},
+{"question":"The only function of NOT gate is to __________","answers":{"a":"Stop signal","b":"Invert input signal","c":"Act as a universal gate","d":"None of the above"},"correctAnswer":"b"},
+{"question":"What type of logic gate's behavior does this truth table represent?","answers":{"a":"2 input OR gate","b":"3 input OR gate","c":"3 input EXOR gate","d":"4 input EXOR gate"},"correctAnswer":"b"}]
