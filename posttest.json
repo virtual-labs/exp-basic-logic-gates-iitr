@@ -1,0 +1,11 @@
+[{"question":"A positive AND gate is also a negative","answers":{"a":"NAND gate","b":"NOR gate","c":"AND gate","d":"OR gate"},"correctAnswer":"d"},
+{"question":"The Boolean expression for two input NAND gate","answers":{"a":"(A.B)'","b":"(A+B)'","c":"A'.B'","d":"A+B"},"correctAnswer":"a"},
+{"question":"For multi-input AND gate, the unused input pins should not be left_____.","answers":{"a":"On","b":"Connected","c":"Unconnected","d":"None of the above"},"correctAnswer":"c"},
+{"question":"A NOT gate IC 7404 contains ______ NOT gates.","answers":{"a":"3","b":"4","c":"6","d":"2"},"correctAnswer":"c"},
+{"question":"What is the logic status at A and B to activate the alarm in fire alarm system where A represents temperature sensor while B represents smoke sensor","answers":{"a":"A=1,B=0","b":"A=0,B=1","c":"A=1,B=1","d":"All of the above"},"correctAnswer":"d"},
+{"question":"A fire alarm system can be implemented using","answers":{"a":"Basic logic gates","b":"Op-Amp comparator","c":"555 timer IC","d":"All of the above"},"correctAnswer":"d"},
+{"question":"The Boolean expression in term of A, B and C to activate the buzzer in burglar alarm system where A represents arm key switch, B represents Reed switch and C represents pressure mat, is","answers":{"a":"A'.B.C","b":"A.B.C","c":"A.(B+C)","d":"A.(B'+C)"},"correctAnswer":"d"},
+{"question":"How do you make a NAND gate out of an AND gate using inverters (NOT gates)?","answers":{"a":"Invert the output from the AND gate","b":"Invert both the inputs to the AND gate","c":"Invert one of the inputs to the AND gate","d":"Invert both the inputs and output of the AND gate"},"correctAnswer":"a"},
+{"question":"The output of the logic gate in figure is","image":"<img src='images/que2.png'/>","answers":{"a":"0","b":"1","c":"A'","d":"A"},"correctAnswer":"c"},
+{"question":"For the logic circuit shown in the figure, the required input condition (A,B,C) to make the output X =1 is","image":"<img src='images/que3.png'/>","answers":{"a":"1, 0, 1","b":"0, 0, 1","c":"1, 1, 1","d":"0, 1, 1"},"correctAnswer":"d"}]
+  
