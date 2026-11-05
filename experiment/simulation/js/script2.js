@@ -181,7 +181,7 @@ function checkCircuit() {
     var groups = ['row2','row3','row4','row6','row7','row8','input_A', 'input_B', 'input_C','led_A','led_C', 'VCC', 'GND', 'ic7432_VCC', 'ic7432_4A', 'ic7432_4B', 'ic7432_4Y', 'ic7432_3A', 'ic7432_3B', 'ic7432_3Y', 'ic7432_1A', 'ic7432_1B', 'ic7432_1Y', 'ic7432_2A', 'ic7432_2B', 'ic7432_2Y', 'ic7432_GND', 'ic7404_VCC', 'ic7404_6A', 'ic7404_6Y', 'ic7404_5A', 'ic7404_5Y', 'ic7404_4A', 'ic7404_4Y', 'ic7404_1A', 'ic7404_1Y', 'ic7404_2A', 'ic7404_2Y', 'ic7404_3A', 'ic7404_3Y', 'ic7404_GND', 'ic7408_VCC', 'ic7408_4A', 'ic7408_4B', 'ic7408_4Y', 'ic7408_3A', 'ic7408_3B', 'ic7408_3Y', 'ic7408_1A', 'ic7408_1B', 'ic7408_1Y', 'ic7408_2A', 'ic7408_2B', 'ic7408_2Y', 'ic7408_GND', 'row1', 'row5']
     
     console.log(groups.length)
-    for (var i = 0; i < groups.length; i++) { //inserting groups vertexes
+    for (var i = 0; i < groups.length; i++) { // inserting groups vertexes
         g.addVertex(groups[i]);
     }
 
